@@ -7,6 +7,13 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 # comment com+/
-class LoginPageLocators ():
+class LoginPageLocators():
    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+
+class ProductPageLocators():
+    ADD_TO_BASKET = (By.CSS_SELECTOR, "#add_to_basket_form")
+    PRODUCT_PRICE = (By.CLASS_NAME, "price_color")
+    BASKET_SUM = (By.XPATH, "//div[contains(@class,'alertinner')]/p/strong")
+    PRODUCT_NAME = (By.XPATH,"//div[contains(@class,'product_main')]/h1")
+    PRODUCT_NAME2 = (By.XPATH,"//div[contains(@class,'alertinner')]/strong")
