@@ -17,3 +17,4 @@ class ProductPageLocators():
     BASKET_SUM = (By.XPATH, "//div[contains(@class,'alertinner')]/p/strong")
     PRODUCT_NAME = (By.XPATH,"//div[contains(@class,'product_main')]/h1")
     PRODUCT_NAME2 = (By.XPATH,"//div[contains(@class,'alertinner')]/strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
