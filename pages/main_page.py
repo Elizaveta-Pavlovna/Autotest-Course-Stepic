@@ -8,14 +8,8 @@ import time
 class MainPage(BasePage):
     # Так как браузер у нас хранится как аргумент класса BasePage,
     # обращаться к нему нужно соответствующим образом с помощью self
-    def go_to_login_page(self):
-        link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-        link.click()
-        time.sleep(1)
-        # alert = self.browser.switch_to.alert
-        # alert.accept()
-        # return LoginPage(browser=self.browser, url=self.browser.current_url)
-
-    def should_be_login_link(self):
-        assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
+    def __init__(self, *args, **kwargs):
+        super(MainPage, self).__init__(*args, **kwargs)
+    # метод __init__ вызывается при создании объекта. Конструктор выше с ключевым словом super на самом деле только
+    # вызывает конструктор класса предка и передает ему все те аргументы, которые мы передали в конструктор MainPage.
 
