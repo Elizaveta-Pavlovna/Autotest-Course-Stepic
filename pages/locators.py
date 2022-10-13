@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # каждый селектор — это пара: как искать и что искать.
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.XPATH, "//span[contains(@class, 'btn-group')]/a")
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
@@ -22,3 +22,7 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.XPATH,"//div[contains(@class,'product_main')]/h1")
     PRODUCT_NAME2 = (By.XPATH,"//div[contains(@class,'alertinner')]/strong")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
+
+class BasketPageLocators():
+    BASKET_CONTENT = (By.CLASS_NAME, "basket_summary")
+    TEXT_EMPTY_BASKET = (By.XPATH,"//div[@id='content_inner']/p")
