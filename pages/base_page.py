@@ -39,6 +39,11 @@ class BasePage():
             return False
         return True
 
+    # проверка на то, что пользователь залогинен
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
+
     # Неделя 3.3.1
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
